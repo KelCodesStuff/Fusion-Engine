@@ -34,6 +34,11 @@ public:
 	/// Advance simulation and record GPU commands for one frame.
 	/// deltaSeconds is wall‑clock time since the previous call (seconds).
 	void tick(double deltaSeconds);
+
+	/// Optional: Attach the platform surface. For Metal this will be a
+	/// `CAMetalLayer*` provided as an opaque pointer from the bridge. Kept here
+	/// to enable future metal-cpp integration without Objective‑C includes.
+	void attachCAMetalLayer(void* caMetalLayer);
 };
 
 } // namespace fe
