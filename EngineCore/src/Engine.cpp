@@ -1,4 +1,5 @@
 #include "EngineCore/Engine.h"
+#include "../render/Renderer.h"
 
 namespace fe {
 
@@ -20,6 +21,11 @@ void Engine::resize(int /*width*/, int /*height*/) {}
 // 2) Update view/projection, gather visible objects
 // 3) Encode GPU command buffers and submit
 void Engine::tick(double /*deltaSeconds*/) {}
+
+void Engine::attachCAMetalLayer(void* /*caMetalLayer*/) {
+    // Placeholder; once metal-cpp is integrated, store CAMetalLayer* here and
+    // create MTL::Device/CommandQueue/Drawable handling in C++.
+}
 
 } // namespace fe
 
