@@ -20,6 +20,9 @@ void FEEngineTick(FEEngineHandle engine, double deltaSeconds);
 // Destroy the engine and release resources. Safe to pass NULL.
 void FEEngineDestroy(FEEngineHandle engine);
 
+// Optional: attach CAMetalLayer to the C++ core for metal-cpp migration
+void FEEngineAttachLayer(FEEngineHandle engine, void* caMetalLayer /* CAMetalLayer* */);
+
 #ifdef __cplusplus
 }
 #endif
